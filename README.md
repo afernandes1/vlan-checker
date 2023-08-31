@@ -14,15 +14,18 @@ The command "show vlan id XXXX" where XXXX is the vlan id extracted from the xls
 Result 1 - Find the word "Po100" which is the interface we want to check:
 If the result is != -1, it means the word "Po100" is present when we issue the command "show vlan id XXXX"
 
+```python
 if output2.find("Po100") != -1:
+```
 
 Conclusion 1: vlan id XXXX in CORE and configured in the interface PO100
 
 
 Result 2 - after issuing the command "show vlan id XXXX" we get "not found in current VLAN database":
 
+```python
 elif output2.find("not found in current VLAN database") != -1:
-
+```
 
 Conclusion : It means the vlans XXXX is not present in this equipment
 
